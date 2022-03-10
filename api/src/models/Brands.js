@@ -1,21 +1,13 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.define("products", {
+  sequelize.define("brands", {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    logo_url: {
       type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    image_url: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    price: {
-      type: DataTypes.STRING,
       allowNull: false,
     },
   });
