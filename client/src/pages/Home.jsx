@@ -1,9 +1,10 @@
 import React from "react";
 import Cards from "../components/cards/Cards";
+import home from "./home.scss";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Cards />
     </div>
   );
