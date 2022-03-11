@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllDetails } from "../../redux/actions/actions";
+import "./cardDetails.scss";
+import NavBar from "../navBar/NavBar";
 
 const CardDetails = () => {
   let { id } = useParams();
@@ -20,21 +22,24 @@ const CardDetails = () => {
 
   return (
     <div className="detailContainer">
+      <NavBar />
       {detail.brand ? (
-        <div className="container2">
-          <img src={detail.id} alt="" />
-          <img src={detail.image_url} alt="" />
-          <span>{detail.name}</span>
-          <span>{detail.description}</span>
-          <span>{detail.price}</span>
-          <img src={detail.brand.logo_url} alt="" />
+        <div className="containerBox">
+          <div className="imgContainer">
+            <img src={detail.image_url} alt="" />
+          </div>
+          <div className="containerDescr">
+            <h1>{detail.name}</h1>
+            <span className="description">{detail.description}</span>
+            <span className="price">${detail.price}</span>
+            <img src={detail.brand.logo_url} alt="" />
+          </div>
         </div>
       ) : (
         <div className="notfound">
           <span>Nothing here</span>
         </div>
       )}
-      <button onClick={handleOnClick}>Home</button>
     </div>
   );
 };

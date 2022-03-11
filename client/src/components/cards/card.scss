@@ -1,0 +1,28 @@
+.cardsContainer {
+  .card {
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+    width: 25rem;
+    height: 40rem;
+    border-radius: 20px;
+    .imgProduct {
+      width: 25rem;
+      height: 33rem;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    .cardText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 9rem;
+
+      .imgBrand {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}

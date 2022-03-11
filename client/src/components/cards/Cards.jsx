@@ -19,17 +19,19 @@ const Cards = () => {
       <div className="navbar">
         <NavBar />
       </div>
-      {products.map((p) => (
-        <Card
-          key={p.id}
-          id={p.id}
-          name={p.name}
-          description={p.description}
-          img={p.image_url}
-          brand={p.brand.logo_url}
-          price={p.price}
-        />
-      ))}
+      <div className="cardlist">
+        {products.map((p) => (
+          <Card
+            key={p.id}
+            id={p.id}
+            name={p.name}
+            description={p.description}
+            img={p.image_url}
+            brand={p.brand.logo_url}
+            price={p.price}
+          />
+        ))}
+      </div>
     </div>
   );
 };
