@@ -72,6 +72,7 @@ const productById = async (req, res, next) => {
           model: Brands,
         },
       });
+      res.send(productId);
     } else {
       res.send({ message: "something goes wrong" });
     }
@@ -85,4 +86,5 @@ module.exports = {
   getProducts,
   deleteProduct,
   modifyProduct,
+  productById,
 };
