@@ -1,13 +1,13 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import CardDetails from "./components/details/CardDetails";
-import Cards from "./components/cards/Cards";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path={"/home"} element={<Cards />} />
+        <Route path={"/"} element={<Home />} />
         <Route path={"/detail/:id"} element={<CardDetails />} />
       </Routes>
     </div>

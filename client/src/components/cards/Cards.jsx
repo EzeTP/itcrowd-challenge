@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../../redux/actions/actions";
+import Card from "./Card";
 
 const Cards = () => {
-  return <div>Cards</div>;
+  const products = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, [dispatch]);
+
+  console.log(products);
+  return (
+    <div>
+      {products.map((p) => (
+        <Card
+          key={p.id}
+          id={p.id}
+          name={p.name}
+          description={p.description}
+          img={p.image_url}
+          brand={p.brand.logo_url}
+          price={p.price}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default Cards;
