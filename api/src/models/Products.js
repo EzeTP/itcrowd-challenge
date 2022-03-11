@@ -18,5 +18,12 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    brandId: {
+      type: DataTypes.INTEGER,
+      /*  references: {
+        model: "Brands",
+        key: "id",
+      }, */
+    },
   });
 };

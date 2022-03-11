@@ -22,10 +22,14 @@ const newBrand = async (req, res) => {
   const [createdBrand, alreadyCreated] = await Brands.findOrCreate({
     where: {
       name: name,
-      logo_url: logo_url,
     },
     defaults: newBrands,
   });
 
   res.send(createdBrand);
+};
+
+module.exports = {
+  getBrands,
+  newBrand,
 };
