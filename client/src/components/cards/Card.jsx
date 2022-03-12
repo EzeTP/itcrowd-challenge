@@ -13,8 +13,8 @@ const Card = ({ id, name, img, brand, price }) => {
       <div className="card">
         <img className="imgProduct" src={img} alt="img not found" />
         <div className="cardText">
-          <span>{name}</span>
-          <span>{price}</span>
+          <h3>{name}</h3>
+          <span>${price}</span>
           <img className="imgBrand" src={brand} alt="img not found" />
         </div>
       </div>
