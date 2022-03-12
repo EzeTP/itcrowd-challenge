@@ -30,7 +30,22 @@ const newBrand = async (req, res) => {
   res.send(createdBrand);
 };
 
+const modifyBrand = async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    await Brands.update(req.body, {
+      where: {
+        id: id,
+      },
+    });
+    res.sendStatus(200);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   getBrands,
   newBrand,
+  modifyBrand,
 };
