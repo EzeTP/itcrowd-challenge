@@ -5,7 +5,8 @@ const getBrands = async (req, res, next) => {
     let brandsDb = await Brands.findAll({
       attributes: { exclude: ["createdAt", "updatedAt"] },
     });
-    res.status(200).json(brandsDb);
+    /* res.status(200).json(brandsDb); */
+    res.send(brandsDb);
   } catch (err) {
     next(err);
   }
