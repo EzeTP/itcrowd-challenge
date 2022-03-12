@@ -10,6 +10,6 @@ const {
 
 router.get("/", getBrands);
 router.post("/", newBrand);
-router.put("/", modifyBrand);
+router.put("/:id", modifyBrand);
 
 module.exports = router;
