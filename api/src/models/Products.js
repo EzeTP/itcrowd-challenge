@@ -20,10 +20,6 @@ module.exports = (sequelize) => {
     },
     brandId: {
       type: DataTypes.INTEGER,
-      /*  references: {
-        model: "Brands",
-        key: "id",
-      }, */
     },
   });
 };
