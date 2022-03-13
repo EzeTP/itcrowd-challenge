@@ -33,11 +33,12 @@ const CardDetails = () => {
             <span className="description">{detail.description}</span>
             <span className="price">${detail.price}</span>
             <img src={detail.brand.logo_url} alt="" />
+            <button>Add to Card</button>
           </div>
         </div>
       ) : (
         <div className="notfound">
-          <span>Nothing here</span>
+          <span>Nothings here</span>
         </div>
       )}
     </div>
